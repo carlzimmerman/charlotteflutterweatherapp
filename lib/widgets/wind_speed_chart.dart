@@ -8,11 +8,12 @@ class WindSpeedChart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AspectRatio(
-      aspectRatio: 1,
+    // Adjusting the overall size by setting a more flexible aspect ratio if needed
+    return Container(
+      height: 100, // Set a fixed height to control the size
       child: PieChart(
         PieChartData(
-          centerSpaceRadius: 60,
+          centerSpaceRadius: 20, // Slightly smaller center space
           sectionsSpace: 0,
           startDegreeOffset: 270, // Start from top
           sections: showingSections(),
@@ -24,7 +25,7 @@ class WindSpeedChart extends StatelessWidget {
   List<PieChartSectionData> showingSections() {
     return List.generate(2, (i) {
       final isWindSection = i == 0;
-      double radius = isWindSection ? 100 : 90;
+      double radius = isWindSection ? 70 : 60; // Reduced radius for both sections
       double value = isWindSection ? windMph : 100 - windMph;
       Color color = isWindSection ? Colors.blue : Colors.grey[300]!;
 
