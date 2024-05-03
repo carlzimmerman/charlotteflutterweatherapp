@@ -16,4 +16,4 @@ For help getting started with Flutter development, view the
 samples, guidance on mobile development, and a full API reference.
 
 
-Please remember to replace the 
+Please remember to replace the WEATHER_API_KEY in the lib/services/weather_api_service.dart file with your own from weatherapi.com
